@@ -1,0 +1,59 @@
+<main
+  class="mt-14 absolute w-screen h-screen border-t border-slate-600 overflow-auto"
+  [ngClass]="{
+    'light-s': themeService.getTheme() === 'light',
+    'dark-s': themeService.getTheme() === 'dark'
+  }"
+>
+  <header
+    [ngClass]="{
+      'light-ga': themeService.getTheme() === 'light',
+      'dark-ga': themeService.getTheme() === 'dark'
+    }"
+    class="w-full h-1/6 flex justify-start items-center"
+  >
+    <div class="flex-col">
+      <P class="pl-3 md:text-3xl font-black">ORDERNAR INFORMACIÓN</P>
+      <p class="mx-7 my-3">
+        Tablas que muestran datos, ajustables, con alternancia de colores y
+        temas.
+      </p>
+    </div>
+  </header>
+  <section class="flex justify-center items-center">
+    <div
+      [ngClass]="{
+        'light-s': themeService.getTheme() === 'light',
+        'dark-s': themeService.getTheme() === 'dark'
+      }"
+      class="container flex justify-center items-center py-5"
+    >
+      <div class="grid grid-cols-1 gap-7 w-5/6 justify-center items-center">
+        <app-table-a></app-table-a>
+        <app-table-b></app-table-b>
+        <app-table-c></app-table-c>
+        <app-custom-table
+          [data]="dataSource"
+          [columns]="columns"
+        ></app-custom-table>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div
+      [ngClass]="{
+        'light-gb': themeService.getTheme() === 'light',
+        'dark-gb': themeService.getTheme() === 'dark'
+      }"
+      class="flex w-full h-28"
+    >
+      <ul>
+        <li class="flex py-5 pl-9">
+          <fa-icon class="pr-3" [icon]="faCircleDot"></fa-icon>
+          <p>Con el apoyo de Angular CDK</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer><app-footer></app-footer></footer>
+</main>

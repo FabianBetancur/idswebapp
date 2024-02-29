@@ -1,0 +1,76 @@
+<div class="w-full h-full flex justify-center items-center">
+  <div class="w-2/3 shadow-md">
+    <div
+      [ngClass]="{
+        'light-s': themeService.getTheme() === 'light',
+        'dark-s': themeService.getTheme() === 'dark'
+      }"
+      class="flex-col bg-slate-500 w-full h-full border border-slate-600 rounded-md"
+    >
+      <div class="button-m-eb flex w-full justify-end items-center">
+        <fa-icon class="mr-4 cursor-pointer" [icon]="faCircleXmark"></fa-icon>
+      </div>
+
+      <!---->
+      <div
+        class="button-m-b item transition duration-9000 dark:hover:bg-slate-700 cursor-pointer"
+      >
+        <div class="w-full h-full flex justify-start items-center">
+          <div class="ml-5"><fa-icon [icon]="faMugHot"></fa-icon></div>
+        </div>
+        <div class="w-full h-full flex justify-end items-center">
+          <div class="mr-4">opcion 1</div>
+        </div>
+      </div>
+      <!---->
+      <div
+        ngClass="button-m-b"
+        class="item transition duration-9000 dark:hover:bg-slate-700 cursor-pointer"
+      >
+        <div class="w-full h-full flex justify-start items-center">
+          <div class="ml-5"><fa-icon [icon]="faMugHot"></fa-icon></div>
+        </div>
+        <div class="w-full h-full flex justify-end items-center">
+          <div class="mr-4">opcion 2</div>
+        </div>
+      </div>
+      <!---->
+      <div
+        ngClass="button-m-b"
+        class="item transition duration-9000 dark:hover:bg-slate-700 cursor-pointer"
+      >
+        <div class="w-full h-full flex justify-start items-center">
+          <div class="ml-5"><fa-icon [icon]="faMugHot"></fa-icon></div>
+        </div>
+        <div class="w-full h-full flex justify-end items-center">
+          <div class="mr-4">opcion 3</div>
+        </div>
+      </div>
+      <!---->
+      <div
+        ngClass="button-m-b"
+        class="item transition duration-9000 dark:hover:bg-slate-700 cursor-pointer"
+      >
+        <div class="w-full h-full flex justify-start items-center">
+          <div class="ml-5"><fa-icon [icon]="faMugHot"></fa-icon></div>
+        </div>
+        <div class="w-full h-full flex justify-end items-center">
+          <div class="mr-4">opcion 4</div>
+        </div>
+      </div>
+      <!---->
+      <div
+        ngClass="button-m-b"
+        class="item transition duration-9000 dark:hover:bg-slate-700 cursor-pointer"
+      >
+        <div class="w-full h-full flex justify-start items-center">
+          <div class="ml-5"><fa-icon [icon]="faMugHot"></fa-icon></div>
+        </div>
+        <div class="w-full h-full flex justify-end items-center">
+          <div class="mr-4">opcion 5</div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</div>

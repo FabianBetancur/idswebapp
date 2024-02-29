@@ -1,0 +1,236 @@
+<!--//////////////////////NAVBAR///////////////////////-->
+<div class="flex w-full h-auto mt-2 border-t border-b border-slate-700">
+  <div class="h-auto w-1/3 flex">
+    <button class="p-2 text-lg">
+      <fa-icon class="" [icon]="faFireFlameCurved"></fa-icon>
+      porttitor
+    </button>
+  </div>
+
+  <div class="h-auto w-2/3 space-x-3 mr-1 flex justify-end items-center">
+    <button
+      class="m-1 p-1 px-2 text-slate-900 rounded-md bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-800 hover:bg-green-700 item transition duration-9000 ease-out"
+    >
+      Help
+    </button>
+
+    <button
+      class="hidden xl:block m-1 p-1 px-2 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-400 hover:bg-slate-600 item transition duration-9000 ease-out"
+    >
+      Phasellus
+    </button>
+
+    <button
+      class="hidden xl:block m-1 p-1 px-2 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-400 hover:bg-slate-600 item transition duration-9000 ease-out"
+    >
+      Vulputate
+    </button>
+
+    <button
+      class="p-1 px-2 focus:outline-none focus:ring-2 focus:ring-slate-400 flex border border-slate-700 rounded-md hover:bg-slate-600 item transition duration-9000 ease-out"
+    >
+      <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+    </button>
+
+    <div class="h-auto flex px-2">
+      <button type="button" class="block rounded" aria-expanded="false">
+        <img
+          class="xl:w-8 xl:h-8 w-9 h-9 rounded-full md:w-12 md:h-12"
+          [src]="src"
+          alt=""
+        />
+      </button>
+    </div>
+  </div>
+</div>
+<!--//////////////////////FLEXBOX///////////////////////-->
+<!--//////////////////////BUTTONSMENULEFT///////////////////////-->
+<div class="flex">
+  <div class="w-1/6 xl:w-1/6 flex-col xl:pl-2">
+    <div
+      class="flex xl:justify-start xl:items-center justify-center items-center py-2"
+    >
+      <button type="button" class="block rounded" aria-expanded="false">
+        <img class="w-9 h-9 rounded-full md:w-12 md:h-12" [src]="src" alt="" />
+      </button>
+      <div>
+        <p class="hidden text-sm ml-3 xl:block">Praesent efficitur</p>
+        <p class="hidden text-sm ml-3 xl:block font-bold">arcu vitae</p>
+      </div>
+    </div>
+    <!--//////////////////////OPTIONS///////////////////////-->
+    <div
+      class="flex mx-1 py-2 xl:pl-2 xl:justify-start xl:items-center justify-center items-center rounded-full xl:rounded-2xl hover:bg-slate-700 cursor-pointer item transition duration-9000 ease-out"
+    >
+      <button class="text-xl flex justify-center items-center">
+        <fa-icon [icon]="faHouseChimneyUser"></fa-icon>
+      </button>
+      <label class="hidden cursor-pointer pl-2 xl:block"
+        >Quam pellentesque</label
+      >
+    </div>
+    <!--//////////////////////OPTIONS///////////////////////-->
+    <div
+      class="flex mx-1 py-2 my-2 xl:pl-2 xl:justify-start xl:items-center justify-center items-center rounded-full xl:rounded-2xl hover:bg-slate-700 cursor-pointer item transition duration-9000 ease-out"
+    >
+      <button class="text-xl flex justify-center items-center">
+        <fa-icon [icon]="faHouseChimneyUser"></fa-icon>
+      </button>
+      <label class="hidden cursor-pointer pl-2 xl:block">Nulla ultrices</label>
+    </div>
+    <!--//////////////////////OPTIONS///////////////////////-->
+    <div
+      class="flex mx-1 py-2 my-2 xl:pl-2 xl:justify-start xl:items-center justify-center items-center rounded-full xl:rounded-2xl hover:bg-slate-700 cursor-pointer item transition duration-9000 ease-out"
+    >
+      <button class="text-xl flex justify-center items-center">
+        <fa-icon [icon]="faHouseChimneyUser"></fa-icon>
+      </button>
+      <label class="hidden cursor-pointer pl-2 xl:block">Pellentesque</label>
+    </div>
+    <!--//////////////////////OPTIONS///////////////////////-->
+    <div
+      class="flex mx-1 py-2 my-2 xl:pl-2 xl:justify-start xl:items-center justify-center items-center rounded-full xl:rounded-2xl hover:bg-slate-700 cursor-pointer item transition duration-9000 ease-out"
+    >
+      <button class="text-xl flex justify-center items-center">
+        <fa-icon [icon]="faHouseChimneyUser"></fa-icon>
+      </button>
+      <label class="hidden cursor-pointer pl-2 xl:block">vitae pulvinar</label>
+    </div>
+
+    <!--////////////////////BUTTONFOOTER///////////////////////-->
+    <div class="justify-center items-end flex h-auto">
+      <button
+        class="flex m-1 p-1 px-2 text-slate-900 bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-800 hover:bg-green-700 item transition duration-9000 ease-out rounded-lg justify-center items-center w-5/6"
+      >
+        <h1 class="hidden xl:block">Efficitur</h1>
+        <fa-icon [icon]="faCloud" class="text-lg xl:hidden"></fa-icon>
+      </button>
+    </div>
+    <!--/////////////////////////////////////////////-->
+  </div>
+
+  <!--/////////////////////////////////////////////-->
+  <!--/////////////////////ELEMENT////////////////////////-->
+  <div class="grid grid-cols-1 gap-1 p-1 w-full h-full xl:flex">
+    <div class="xl:flex-col">
+      <div class="xl:flex">
+        <div class="flex w-full h-full">
+          <div
+            class="w-full xl:w-full h-auto rounded-md border border-slate-700 shadow-md"
+          >
+            <img class="w-full h-auto rounded-b" [src]="src2" />
+          </div>
+        </div>
+        <!--/////////////////////////////////////////////-->
+        <div class="flex-col w-full h-full p-2">
+          <h1 class="text-3xl">Quam pellentesque</h1>
+          <p>
+            Ut tristique lorem et quam pellentesque tincidunt. Sed sed arcu
+            enim. Praesent efficitur, erat non maximus commodo, massa quam
+            finibus eros, non pharetra magna tellus quis tellus. Maecenas in
+            elementum velit, at volutpat dui.
+          </p>
+        </div>
+        <!--/////////////////////////////////////////////-->
+        <div class="flex w-full h-auto justify-center items-end">
+          <!--////////////////////BUTTONFOOTER///////////////////////-->
+          <div class="justify-center items-end flex w-full h-full">
+            <button
+              class="flex m-1 p-1 px-2 xl:mx-24 text-slate-900 bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-800 hover:bg-green-700 item transition duration-9000 ease-out rounded-lg justify-center items-center w-5/6"
+            >
+              <fa-icon [icon]="faCloud" class="text-lg xl:text-xs"></fa-icon>
+              <h1 class="mx-2">Efficitur</h1>
+            </button>
+          </div>
+          <!--/////////////////////////////////////////////-->
+        </div>
+      </div>
+
+      <hr class="border-slate-700 mb-2 mt-2 mx-8" />
+
+      <!--/////////////////////////////////////////////-->
+      <!--/////////////////////////////////////////////-->
+      <div class="xl:flex">
+        <div class="flex w-full h-full">
+          <div
+            class="w-full xl:w-full h-auto rounded-md border border-slate-700 shadow-md"
+          >
+            <img class="w-full h-auto rounded-b" [src]="src2" />
+          </div>
+        </div>
+        <!--/////////////////////////////////////////////-->
+        <div class="flex-col w-full h-full p-2">
+          <h1 class="text-3xl">Quam pellentesque</h1>
+          <p>
+            Ut tristique lorem et quam pellentesque tincidunt. Sed sed arcu
+            enim. Praesent efficitur, erat non maximus commodo, massa quam
+            finibus eros, non pharetra magna tellus quis tellus. Maecenas in
+            elementum velit, at volutpat dui.
+          </p>
+        </div>
+        <!--/////////////////////////////////////////////-->
+        <div class="flex w-full h-auto justify-center items-end">
+          <!--////////////////////BUTTONFOOTER///////////////////////-->
+          <div class="justify-center items-end flex w-full h-full">
+            <button
+              class="flex m-1 p-1 px-2 xl:mx-24 text-slate-900 bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-800 hover:bg-green-700 item transition duration-9000 ease-out rounded-lg justify-center items-center w-5/6"
+            >
+              <fa-icon [icon]="faCloud" class="text-lg xl:text-xs"></fa-icon>
+              <h1 class="mx-2">Efficitur</h1>
+            </button>
+          </div>
+          <!--/////////////////////////////////////////////-->
+        </div>
+      </div>
+
+      <hr class="border-slate-700 mb-2 mt-2 mx-8" />
+
+      <!--/////////////////////////////////////////////-->
+      <!--/////////////////////////////////////////////-->
+
+      <div class="xl:flex">
+        <div class="flex w-full h-full">
+          <div
+            class="w-full xl:w-full h-auto rounded-md border border-slate-700 shadow-md"
+          >
+            <img class="w-full h-auto rounded-b" [src]="src2" />
+          </div>
+        </div>
+        <!--/////////////////////////////////////////////-->
+        <div class="flex-col w-full h-full p-2">
+          <h1 class="text-3xl">Quam pellentesque</h1>
+          <p>
+            Ut tristique lorem et quam pellentesque tincidunt. Sed sed arcu
+            enim. Praesent efficitur, erat non maximus commodo, massa quam
+            finibus eros, non pharetra magna tellus quis tellus. Maecenas in
+            elementum velit, at volutpat dui.
+          </p>
+        </div>
+        <!--/////////////////////////////////////////////-->
+        <div class="flex w-full h-auto justify-center items-end">
+          <!--////////////////////BUTTONFOOTER///////////////////////-->
+          <div class="justify-center items-end flex w-full h-full">
+            <button
+              class="flex m-1 p-1 px-2 xl:mx-24 text-slate-900 bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-800 hover:bg-green-700 item transition duration-9000 ease-out rounded-lg justify-center items-center w-5/6"
+            >
+              <fa-icon [icon]="faCloud" class="text-lg xl:text-xs"></fa-icon>
+              <h1 class="mx-2">Efficitur</h1>
+            </button>
+          </div>
+          <!--/////////////////////////////////////////////-->
+        </div>
+      </div>
+
+      <hr class="border-slate-700 mb-2 mt-2 mx-8" />
+
+      <!--/////////////////////////////////////////////-->
+      <!--/////////////////////////////////////////////-->
+    </div>
+  </div>
+
+  <!--/////////////////////ELEMENT////////////////////////-->
+</div>
+
+<!--
+   
+-->

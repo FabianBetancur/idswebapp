@@ -1,0 +1,83 @@
+<div class="flex mb-4 md:max-w-2xl h-80 sm:h-72 md:h-96">
+  <img class="w-full h-auto rounded-t" [src]="src2" />
+</div>
+<!--////////////////////ICONSBUTTONS///////////////////////////-->
+<div class="flex justify-center items-center space-x-5">
+  <button class="button-t rounded-md">
+    <fa-icon [icon]="faDice"></fa-icon>
+  </button>
+  <button class="button-t rounded-md">
+    <fa-icon [icon]="faDice"></fa-icon>
+  </button>
+  <button class="button-t rounded-md">
+    <fa-icon [icon]="faDice"></fa-icon>
+  </button>
+  <button class="button-t rounded-md">
+    <fa-icon [icon]="faDice"></fa-icon>
+  </button>
+  <button class="button-t rounded-md">
+    <fa-icon [icon]="faDice"></fa-icon>
+  </button>
+</div>
+<!--////////////////////ICONSBUTTONS///////////////////////////-->
+
+<hr class="border border-slate-700 my-3 mx-8" />
+<!--//////////////////////TOGGLEBUTTONS///////////////////////7-->
+<div class="border-l border-r border-b rounded-md">
+  <div class="flex mb-2 justify-center items-center">
+    <button
+      class="button-t rounded-l border"
+      [ngClass]="{
+        'dark-s': isActive1,
+        'light-s': !isActive1
+      }"
+      (click)="toggle1()"
+    >
+      button1
+    </button>
+    <button
+      class="button-t border-b border-t"
+      [ngClass]="{
+        'dark-s': isActive2,
+        'light-s': !isActive2
+      }"
+      (click)="toggle2()"
+    >
+      button2
+    </button>
+    <button
+      class="button-t border rounded-r"
+      [ngClass]="{
+        'dark-s': isActive3,
+        'light-s': !isActive3
+      }"
+      (click)="toggle3()"
+    >
+      button2
+    </button>
+  </div>
+
+  <div class="flex justify-center items-center">
+    <p *ngIf="isActive2" class="m-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+      scelerisque ac quam a fermentum. Pellentesque bibendum justo a enim
+      euismod, et placerat dolor congue. Cras porttitor mattis urna luctus
+      elementum. Phasellus bibendum ornare ex, eu condimentum arcu venenatis
+      nec.
+    </p>
+    <p *ngIf="isActive1" class="m-4">
+      Ut tristique lorem et quam pellentesque tincidunt. Sed sed arcu enim.
+      Praesent efficitur, erat non maximus commodo, massa quam finibus eros, non
+      pharetra magna tellus quis tellus. Maecenas in elementum velit, at
+      volutpat dui. Phasellus vitae enim est. Sed id urna eu nibh efficitur
+      pharetra.
+    </p>
+    <p *ngIf="isActive3" class="m-4">
+      Nullam vitae urna mattis, sagittis ligula at, lobortis metus. Ut dictum
+      nibh sit amet nulla ultrices vulputate. Pellentesque habitant morbi
+      tristique senectus et netus et malesuada fames ac turpis egestas. Donec
+      ultricies, arcu vitae pulvinar egestas, lectus arcu efficitur risus, eu
+      interdum est sem nec leo.
+    </p>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div
+  class="fixed z-50 inset-0 flex items-center justify-center bg-opacity-50 bg-slate-900"
+  *ngIf="statusDetail !== 'init'"
+>
+  <div class="w-5/6 xl:w-2/4 bg-slate-400 p-2 rounded shadow-md">
+    <!-- Contenido de la alerta -->
+    <ng-content></ng-content>
+  </div>
+</div>
+
+<!-- ///////////////////////NAV//////////////////////
+  <div class="flex justify-end">
+    <button>
+      <fa-icon [icon]="faCircleXmark"></fa-icon>
+    </button>
+  </div>
+-->

@@ -1,0 +1,63 @@
+<div
+  class="absolute w-full h-full flex-col overflow-auto"
+  [ngClass]="{
+    'light-s': themeService.getTheme() === 'light',
+    'dark-s': themeService.getTheme() === 'dark'
+  }"
+>
+  <!--////////////BANNER////////////-->
+  <div
+    [ngClass]="{
+      'light-ga': themeService.getTheme() === 'light',
+      'dark-ga': themeService.getTheme() === 'dark'
+    }"
+    class="flex mt-14 h-32 md:h-36 pl-3 justify-start items-center border-t border-slate-600"
+  >
+    <div class="flex-col">
+      <p class="md:text-3xl font-black">MENÚS</p>
+      <p class="mx-3 my-2 font-normal">
+        Diseñados para funcionar como menú contextual o menú principal, con
+        alternancia de colores y/o temas.
+      </p>
+    </div>
+  </div>
+  <!--////////////BANNER////////////-->
+  <!--////////TABLA////////////////-->
+  <div
+    [ngClass]="{
+      'light-s': themeService.getTheme() === 'light',
+      'dark-s': themeService.getTheme() === 'dark'
+    }"
+    class="container md:w-5/6 sm:w-1/2 mx-auto py-4"
+  >
+    <div
+      [ngClass]="{
+        'light-s': themeService.getTheme() === 'light',
+        'dark-s': themeService.getTheme() === 'dark'
+      }"
+      class="h-full grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-3 md:py-12"
+    >
+      <app-menu-a></app-menu-a>
+      <app-menu-b></app-menu-b>
+      <app-menu-c></app-menu-c>
+    </div>
+  </div>
+  <!--////////TABLA////////////////-->
+  <div
+    [ngClass]="{
+      'light-gb': themeService.getTheme() === 'light',
+      'dark-gb': themeService.getTheme() === 'dark'
+    }"
+    class="flex w-full h-28"
+  >
+    <ul>
+      <li class="flex py-5 pl-9">
+        <fa-icon class="pr-3" [icon]="faCircleDot"></fa-icon>
+        <p>Con el apoyo de Angular CDK</p>
+      </li>
+    </ul>
+  </div>
+  <!--////////FOOTER////////////////-->
+  <app-footer class="flex justify-center items-end"></app-footer>
+  <!--////////FOOTER////////////////-->
+</div>

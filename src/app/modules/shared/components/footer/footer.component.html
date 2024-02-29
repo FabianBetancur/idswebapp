@@ -1,0 +1,9 @@
+<div
+  [ngClass]="{
+    'light-s': themeService.getTheme() === 'light',
+    'dark-s': themeService.getTheme() === 'dark'
+  }"
+  class="flex w-full pb-3 justify-center"
+>
+  <p>Ids ©</p>
+</div>

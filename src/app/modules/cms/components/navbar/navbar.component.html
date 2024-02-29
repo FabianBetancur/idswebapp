@@ -1,0 +1,73 @@
+<div
+  [ngClass]="{
+    'light-s': themeService.getTheme() === 'light',
+    'dark-s': themeService.getTheme() === 'dark'
+  }"
+  class="fixed z-10 w-full block"
+>
+  <div class="flex">
+    <button
+      [ngClass]="{
+        'light-s': themeService.getTheme() === 'light',
+        'dark-s': themeService.getTheme() === 'dark'
+      }"
+      class="p-3 text-2xl"
+      (click)="changeTheme()"
+    >
+      <fa-icon
+        [icon]="themeService.getTheme() === 'light' ? farLight : fasLight"
+      ></fa-icon>
+    </button>
+
+    <button
+      [ngClass]="{
+        'light-s': themeService.getTheme() === 'light',
+        'dark-s': themeService.getTheme() === 'dark'
+      }"
+      routerLink="/cms"
+      class="p-3 text-xl"
+    >
+      <fa-icon [icon]="faHome"></fa-icon>
+    </button>
+
+    <div class="flex w-full justify-end items-center">
+      <button
+        (click)="clickContact()"
+        [ngClass]="{
+          'light-s': themeService.getTheme() === 'light',
+          'dark-s': themeService.getTheme() === 'dark'
+        }"
+        class="p-3 text-2xl"
+      >
+        <fa-icon [icon]="faUser"></fa-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-alert (click)="onClose()" [statusDetail]="statusDetail">
+  <div class="flex justify-center items-center my-3">
+    <!---->
+    <div class="my-2 mx-2 xl:w-2/3 flex-col justify-center items-center">
+      <button class="flex my-4 w-full justify-center items-center">
+        <fa-icon class="text-6xl my-4" [icon]="faAt"></fa-icon>
+      </button>
+      <p class="my-2 xl:text-xl">
+        Construimos entornos web simples y ajustables, con diseños y tecnologías
+        innovadoras.
+      </p>
+      <p class="my-2 font-semibold xl:text-xl">Contacto:</p>
+      <button>
+        <fa-icon [icon]="faEnvelope"></fa-icon>
+        <a class="mx-2" [href]="getWhatsappLink()" target="_blank"
+          >Enviar mensaje por WhatsApp
+        </a>
+      </button>
+      <div class="flex justify-start items-center">
+        <fa-icon [icon]="faEnvelope"></fa-icon>
+        <p class="my-2 mx-2 xl:text-lg">edfabianb@gmail.com</p>
+      </div>
+    </div>
+    <!---->
+  </div>
+</app-alert>

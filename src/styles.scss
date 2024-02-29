@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.light-ga {
+  @apply bg-gradient-to-b from-slate-500 to-slate-400 text-slate-700;
+}
+
+.dark-ga {
+    @apply bg-gradient-to-b from-slate-800 to-slate-700 text-slate-500;
+  
+}
+
+.light-gb {
+    //@apply bg-slate-950;
+    @apply bg-gradient-to-b from-slate-400 to-slate-500 text-slate-700;
+}
+
+.dark-gb {
+    @apply bg-gradient-to-b from-slate-700 to-slate-800 text-slate-500;
+}
+
+.light-s{
+    background-color: theme('colors.slate.500');
+    color: theme('colors.slate.900');
+    //@apply bg-slate-500
+}
+.dark-s{
+    background-color: theme('colors.slate.800');
+    color: theme('colors.slate.400');
+    //@apply bg-slate-800;
+}
+
+.card-l{
+    background-color: #d25947;
+    color: #413732;
+    border-width: 1px;
+    border-color: #f2edd3;
+    border-radius: 0.375rem;
+}
+.card-d{
+    background-color:  #413732;
+    color: #f2edd3;
+    border-width: 1px;
+    border-color: #d25947;
+    border-radius: 0.375rem;
+}
+
+.cells-bg-sla{
+    background-color: #d25947;
+    color: #413732;
+    border-bottom-color: #f2edd3;
+}
+.cells-bg-sda{
+    background-color:  #413732;
+    color: #f2edd3;
+    border-bottom-color: #d25947;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1300px; /* Ajusta el ancho máximo según tus necesidades */
+  }
+}

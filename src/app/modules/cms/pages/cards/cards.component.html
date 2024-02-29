@@ -1,0 +1,74 @@
+<div
+  [ngClass]="{
+    'light-s': themeService.getTheme() === 'light',
+    'dark-s': themeService.getTheme() === 'dark'
+  }"
+  class="absolute w-full h-full flex-col overflow-auto"
+>
+  <!--////////////BANNER////////////-->
+  <div
+    [ngClass]="{
+      'light-ga': themeService.getTheme() === 'light',
+      'dark-ga': themeService.getTheme() === 'dark'
+    }"
+    class="mt-14 pt-2 h-32 md:h-36 flex justify-start items-center border-t border-slate-600"
+  >
+    <div class="flex-col">
+      <p class="pl-3 md:text-3xl font-black">PRESENTACIÓN DE LA INFORMACIÓN</p>
+      <p class="my-2 mx-7">
+        Compactos contenedores para mostrar e interactuar con la información,
+        ajustables, con alternancia de colores y temas.
+      </p>
+    </div>
+  </div>
+  <!--////////////BANNER////////////-->
+  <!--////////TABLA////////////////-->
+  <div class="flex justify-center items-center py-6">
+    <div
+      [ngClass]="{
+        'light-s': themeService.getTheme() === 'light',
+        'dark-s': themeService.getTheme() === 'dark'
+      }"
+      class="lg:w-2/4 sm:w-3/6 justify-center items-center flex"
+    >
+      <div
+        class="w-full h-full justify-center items-center grid grid-cols-1 gap-12 md:grid-cols-2"
+      >
+        <app-card-a
+          [ngClass]="{
+            'card-l': themeService.getTheme() === 'light',
+            'card-d': themeService.getTheme() === 'dark'
+          }"
+        ></app-card-a>
+        <app-card-b
+          [ngClass]="{
+            'light-s': themeService.getTheme() === 'light',
+            'dark-s': themeService.getTheme() === 'dark'
+          }"
+        ></app-card-b>
+      </div>
+    </div>
+  </div>
+  <!--////////TABLA////////////////-->
+  <!--////////INFO////////////////-->
+  <div
+    [ngClass]="{
+      'light-gb': themeService.getTheme() === 'light',
+      'dark-gb': themeService.getTheme() === 'dark'
+    }"
+    class="flex w-full h-28"
+  >
+    <ul>
+      <li class="flex py-5 pl-5">
+        <fa-icon class="pr-3" [icon]="faCircleDot"></fa-icon>
+        <p>Con el apoyo de Angular CDK y Tailwind CSS</p>
+      </li>
+    </ul>
+  </div>
+  <!--////////INFO////////////////-->
+  <!--////////FOOTER////////////////-->
+  <div class="flex justify-center items-end">
+    <app-footer></app-footer>
+  </div>
+  <!--////////FOOTER////////////////-->
+</div>

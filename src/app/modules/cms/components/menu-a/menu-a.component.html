@@ -1,0 +1,59 @@
+<div class="w-full h-full flex justify-center items-center">
+  <!--MENU-->
+  <div class="w-2/3 shadow-md">
+    <div
+      [ngClass]="{
+        'light-s': themeService.getTheme() === 'light',
+        'dark-s': themeService.getTheme() === 'dark'
+      }"
+      class="flex-col bg-slate-500 w-full h-full border border-slate-600 rounded-md"
+    >
+      <div
+        ngClass="button-a"
+        class="item transition duration-9000 dark:hover:bg-slate-700 cursor-pointer"
+      >
+        <fa-icon class="ml-3" [icon]="faIcons"></fa-icon>
+        <div class="ml-3 block"><h2>opcion 1</h2></div>
+      </div>
+      <div>
+        <hr class="border-b border-b-slate-900" />
+      </div>
+      <div
+        ngClass="button-a"
+        class="item transition duration-9000 dark:hover:bg-slate-700 cursor-pointer"
+      >
+        <fa-icon class="ml-3" [icon]="faIcons"></fa-icon>
+        <div class="ml-3 block"><h2>opcion 2</h2></div>
+      </div>
+      <div
+        ngClass="button-a"
+        class="item transition duration-9000 dark:hover:bg-slate-700 cursor-pointer"
+      >
+        <fa-icon class="ml-3" [icon]="faIcons"></fa-icon>
+        <div class="ml-3 block"><h2>opcion 3</h2></div>
+      </div>
+      <div
+        ngClass="button-a"
+        class="item transition duration-9000 dark:hover:bg-slate-700 cursor-pointer"
+      >
+        <fa-icon class="ml-3" [icon]="faIcons"></fa-icon>
+        <div class="ml-3 block"><h2>opcion 4</h2></div>
+      </div>
+      <div
+        ngClass="button-a"
+        class="item transition duration-9000 dark:hover:bg-slate-700 cursor-pointer"
+      >
+        <fa-icon class="ml-3" [icon]="faIcons"></fa-icon>
+        <div class="ml-3 block"><h2>opcion 5</h2></div>
+      </div>
+      <div
+        ngClass="button-a"
+        class="item transition duration-9000 dark:hover:bg-slate-700 cursor-pointer"
+      >
+        <fa-icon class="ml-3" [icon]="faIcons"></fa-icon>
+        <div class="ml-3 block"><h2>opcion 6</h2></div>
+      </div>
+    </div>
+  </div>
+  <!--MENU-->
+</div>

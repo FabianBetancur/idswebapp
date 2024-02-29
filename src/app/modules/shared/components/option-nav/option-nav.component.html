@@ -1,0 +1,34 @@
+<div
+  [ngClass]="{
+    'light-gb': themeService.getTheme() === 'light',
+    'dark-gb': themeService.getTheme() === 'dark'
+  }"
+  class="w-full py-3 md:h-1/3 md:flex md:justify-center md:items-center"
+>
+  <div class="xl:my-28 grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-44">
+    <div class="text-center">
+      <a routerLink="/cms/menus"
+        ><fa-icon class="text-6xl text-slate-600" [icon]="faBars"></fa-icon>
+        <p class="pt-1">Menus</p>
+      </a>
+    </div>
+    <div class="text-center">
+      <a routerLink="/cms/tables">
+        <fa-icon class="text-6xl text-slate-600" [icon]="faTableList"></fa-icon>
+        <p class="pt-1 text-center">Tablas</p>
+      </a>
+    </div>
+    <div class="text-center">
+      <a routerLink="/cms/cards">
+        <fa-icon class="text-6xl text-slate-600" [icon]="faIdCard"></fa-icon>
+        <p class="pt-1 text-center">Cards</p>
+      </a>
+    </div>
+    <div class="text-center">
+      <a routerLink="/cms/layouts">
+        <fa-icon class="text-6xl text-slate-600" [icon]="faGrip"></fa-icon>
+        <p class="pt-1 text-center">Layout</p>
+      </a>
+    </div>
+  </div>
+</div>

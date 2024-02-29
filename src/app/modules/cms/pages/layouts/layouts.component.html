@@ -1,0 +1,76 @@
+<div
+  [ngClass]="{
+    'light-s': themeService.getTheme() === 'light',
+    'dark-s': themeService.getTheme() === 'dark'
+  }"
+  class="absolute h-full w-full flex-col overflow-auto"
+>
+  <!--////////////////////////////////////////////////////////////-->
+  <div
+    [ngClass]="{
+      'light-ga': themeService.getTheme() === 'light',
+      'dark-ga': themeService.getTheme() === 'dark'
+    }"
+    class="border-t border-slate-600 mt-14 pt-2 mb-2 h-32"
+  >
+    <div class="flex-col pt-2">
+      <p class="pl-3 md:text-3xl font-black">DISPOSICIÓN DE ELEMENTOS</p>
+      <p class="my-1 mx-6">
+        Apariencia y distribución de componentes para software empresarial web.
+      </p>
+    </div>
+  </div>
+  <!--////////////////////////////////////////////////////////////-->
+  <div class="flex justify-center items-center space-x-3">
+    <div>
+      <button
+        [ngClass]="{
+          'bg-slate-700': isActive1,
+          'bg-slate-500': !isActive1
+        }"
+        class="text-xl w-16 rounded-md p-1"
+        (click)="toggle1()"
+      >
+        <fa-icon [icon]="fa1"></fa-icon>
+      </button>
+    </div>
+    <div>
+      <button
+        [ngClass]="{
+          'bg-slate-700': isActive2,
+          'bg-slate-500': !isActive2
+        }"
+        class="text-xl w-16 rounded-md p-1"
+        (click)="toggle2()"
+      >
+        <fa-icon [icon]="fa2"></fa-icon>
+      </button>
+    </div>
+  </div>
+  <!--////////////////////////////////////////////////////////////-->
+  <div class="grid grid-cols-1 w-full justify-center items-center">
+    <app-layout-a *ngIf="isActive1"></app-layout-a>
+    <app-layout-b *ngIf="isActive2"></app-layout-b>
+  </div>
+  <!--////////////////////////////////////////////////////////////-->
+  <div
+    [ngClass]="{
+      'light-gb': themeService.getTheme() === 'light',
+      'dark-gb': themeService.getTheme() === 'dark'
+    }"
+    class="flex w-full h-28"
+  >
+    <ul>
+      <li class="flex py-5 pl-5">
+        <fa-icon class="pr-3" [icon]="faCircleDot"></fa-icon>
+        <p>Con el apoyo de Angular CDK y Tailwind CSS</p>
+      </li>
+    </ul>
+  </div>
+  <!--////////////////////////////////////////////////////////////-->
+  <app-footer></app-footer>
+</div>
+
+<!--
+  <div class="hidden border xl:w-3/4 xl:flex"></div>
+-->
