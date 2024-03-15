@@ -26,7 +26,11 @@
     "paths": {
       "@services/*":["./src/app/services/*"],
       "@shared/*":["./src/app/modules/shared/*"],
-      "@models/*":["./src/app/models/*"]}
+      "@models/*":["./src/app/models/*"],
+      "@interceptors/*":["./src/app/interceptors/*"],
+      "@environments/*":["./src/app/environments/*"],
+      "@guards/*":["./src/app/guards/*"]}
+      
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

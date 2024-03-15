@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { CmsRoutingModule } from './cms-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { SharedModule } from '@shared/shared.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MenusComponent } from './pages/menus/menus.component';
 import { TablesComponent } from './pages/tables/tables.component';
 import { LayoutsComponent } from './pages/layouts/layouts.component';
@@ -44,6 +45,7 @@ import { LayoutBComponent } from './components/layout-b/layout-b.component';
     LayoutBComponent,
   ],
   imports: [
+    ReactiveFormsModule,
     SharedModule,
     CommonModule,
     CmsRoutingModule,
