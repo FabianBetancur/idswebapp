@@ -8,6 +8,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { CustomTableComponent } from './components/custom-table/custom-table.component';
 import { AlertComponent } from './components/alert/alert.component';
+import { BtnNavComponent } from './components/btn-nav/btn-nav.component';
+import { BtnSubmitComponent } from './components/btn-submit/btn-submit.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { AlertComponent } from './components/alert/alert.component';
     FooterComponent,
     CustomTableComponent,
     AlertComponent,
+    BtnNavComponent,
+    BtnSubmitComponent,
   ],
   imports: [CommonModule, FontAwesomeModule, RouterModule, CdkTableModule],
   exports: [
@@ -22,6 +26,8 @@ import { AlertComponent } from './components/alert/alert.component';
     FooterComponent,
     CustomTableComponent,
     AlertComponent,
+    BtnNavComponent,
+    BtnSubmitComponent,
   ],
 })
 export class SharedModule {}

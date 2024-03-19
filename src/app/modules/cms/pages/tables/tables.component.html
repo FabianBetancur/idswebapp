@@ -6,19 +6,22 @@
   }"
 >
   <header
+    (mouseover)="onMouseOver()"
+    (click)="onMouseOut()"
     [ngClass]="{
       'light-ga': themeService.getTheme() === 'light',
       'dark-ga': themeService.getTheme() === 'dark'
     }"
-    class="w-full h-1/6 flex justify-start items-center"
+    class="w-full h-1/6 flex justify-center items-center"
   >
-    <div class="flex-col">
+    <div *ngIf="!toggle" class="flex-col">
       <P class="pl-3 md:text-3xl font-black">ORDERNAR INFORMACIÓN</P>
       <p class="mx-7 my-3">
         Tablas que muestran datos, ajustables, con alternancia de colores y
         temas.
       </p>
     </div>
+    <app-btn-nav *ngIf="toggle"></app-btn-nav>
   </header>
   <section class="flex justify-center items-center">
     <div

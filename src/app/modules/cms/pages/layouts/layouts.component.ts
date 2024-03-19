@@ -12,6 +12,13 @@ export class LayoutsComponent {
   fa2 = fa2;
   isActive1: boolean = true;
   isActive2: boolean = false;
+  toggle: boolean = false;
+  onMouseOver() {
+    this.toggle = true;
+  }
+  onMouseOut() {
+    this.toggle = false;
+  }
   constructor(public themeService: ThemeService) {}
   toggle1() {
     this.isActive1 = !this.isActive1;

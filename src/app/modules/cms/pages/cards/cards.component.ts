@@ -7,5 +7,12 @@ import { faCircleDot } from '@fortawesome/free-regular-svg-icons';
 })
 export class CardsComponent {
   faCircleDot = faCircleDot;
+  toggle: boolean = false;
+  onMouseOver() {
+    this.toggle = true;
+  }
+  onMouseOut() {
+    this.toggle = false;
+  }
   constructor(public themeService: ThemeService) {}
 }

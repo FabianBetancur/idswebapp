@@ -8,5 +8,13 @@ import { faCircleDot } from '@fortawesome/free-solid-svg-icons';
 })
 export class MenusComponent {
   faCircleDot = faCircleDot;
+  toggle: boolean = false;
+  onMouseOver() {
+    this.toggle = true;
+  }
+  onMouseOut() {
+    this.toggle = false;
+  }
+
   constructor(public themeService: ThemeService) {}
 }

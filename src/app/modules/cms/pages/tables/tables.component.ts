@@ -12,6 +12,13 @@ export class TablesComponent {
   dataSource: any[] = [];
   columns: string[] = ['column 1', 'column 2', 'column 3', 'column 4'];
   faCircleDot = faCircleDot;
+  toggle: boolean = false;
+  onMouseOver() {
+    this.toggle = true;
+  }
+  onMouseOut() {
+    this.toggle = false;
+  }
   constructor(
     private http: HttpClient,
     private dataService: DataService,

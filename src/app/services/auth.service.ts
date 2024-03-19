@@ -4,7 +4,7 @@ import { BehaviorSubject, tap } from 'rxjs';
 import { environment } from '@environments/environment';
 import { profileUser } from '@models/user.model';
 import { TokenService } from '@services/token.service';
-import { ResponseLogin } from '@models/auth.module';
+import { ResponseLogin } from '@models/auth.model';
 
 @Injectable({
   providedIn: 'root',

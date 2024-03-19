@@ -44,31 +44,101 @@
     </div>
   </div>
 </div>
-<!--///////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////ALERT/////////////////////////////////////////-->
 <app-alert (click)="onClose()" [statusDetail]="statusDetail">
-  <div class="flex justify-center items-center my-3">
+  <div class="flex justify-center items-center my-2">
     <!---->
-    <div class="my-2 mx-2 xl:w-2/3 flex-col justify-center items-center">
+    <div class="my-2 mx-3 xl:w-2/3 flex-col justify-center items-center">
       <button class="flex my-4 w-full justify-center items-center">
-        <fa-icon class="text-6xl my-4" [icon]="faAt"></fa-icon>
+        <fa-icon class="text-6xl my-2" [icon]="faAt"></fa-icon>
       </button>
-      <p class="my-2 xl:text-xl">
+      <p class="my-4 text-center xl:text-xl">
         Construimos entornos web simples y ajustables, con diseños y tecnologías
         innovadoras.
       </p>
-      <p class="my-2 font-semibold xl:text-xl">Contacto:</p>
+      <div>
+        <p class="my-2 font-semibold xl:text-xl">Contacto:</p>
+        <button>
+          <fa-icon [icon]="faEnvelope"></fa-icon>
+          <a class="mx-2" [href]="getWhatsappLink()" target="_blank"
+            >Enviar mensaje por WhatsApp
+          </a>
+        </button>
+        <button class="flex" (click)="sendMailAlert()">
+          <fa-icon [icon]="faPaperPlane"></fa-icon>
+          <p class="mx-2">Enviar comentario</p>
+        </button>
+      </div>
     </div>
     <!---->
   </div>
 </app-alert>
-
-<!--
-  <button>
-        <fa-icon [icon]="faEnvelope"></fa-icon>
-        <a class="mx-2" [href]="getWhatsappLink()" target="_blank"
-          >Enviar mensaje por WhatsApp
-        </a>
+<!--///////////////////////////////////////////////////////////////-->
+<!--///////////////////////MESSAGE////////////////////////////////////////-->
+<app-alert [statusDetail]="statusEmailAlert"
+  ><div>
+    <div>
+      <button (click)="onCloseSendEmail()">
+        <fa-icon [icon]="faCircleXmark"></fa-icon>
       </button>
+    </div>
+    <form [formGroup]="sendEmailForm" novalidate (ngSubmit)="sendMail()">
+      <div class="mx-5 my-6">
+        <p>Escribe tu comentario:</p>
+      </div>
+      <div class="flex w-full justify-center items-center">
+        <textarea
+          rows="6"
+          cols="4"
+          formControlName="contentMessage"
+          class="w-5/6 rounded focus:outline-none focus:ring focus:border-blue-300"
+        ></textarea>
+      </div>
+      <!--////////////////////////-->
+      <div
+        class="w-2/3 flex justify-center items-center my-1"
+        *ngIf="
+          sendEmailForm.controls.contentMessage.touched &&
+          sendEmailForm.controls.contentMessage.invalid
+        "
+      >
+        <p
+          *ngIf="sendEmailForm.controls.contentMessage.hasError('required')"
+          class="font-medium text-red-700 text-xs"
+        >
+          This field is mandatory
+        </p>
+      </div>
+      <!--////////////////////////-->
+      <div
+        class="w-2/3 flex justify-center items-center my-1"
+        *ngIf="statusEmail === 'success'"
+      >
+        <p class="font-medium text-green-700 text-xs">{{ message }}</p>
+      </div>
+      <div
+        class="w-2/3 flex justify-center items-center"
+        *ngIf="statusEmail === 'failed'"
+      >
+        <p class="font-medium text-red-700 text-xs">{{ message }}</p>
+      </div>
+      <!--////////////////////////-->
+      <div class="w-full flex justify-center items-center my-6">
+        <div class="w-2/3 xl:w-1/3">
+          <app-btn-submit
+            [loading]="statusEmail === 'loading'"
+            [typeBtn]="'submit'"
+            [color]="'success'"
+            >Enviar<fa-icon class="pl-2" [icon]="faPaperPlane"></fa-icon
+          ></app-btn-submit>
+        </div>
+      </div>
+    </form>
+  </div>
+</app-alert>
+<!--///////////////////////////////////////////////////////////////-->
+<!--
+  
       <div class="flex justify-start items-center">
         <fa-icon [icon]="faEnvelope"></fa-icon>
         <p class="my-2 mx-2 xl:text-lg">neuromarketingd23@gmail.com</p>

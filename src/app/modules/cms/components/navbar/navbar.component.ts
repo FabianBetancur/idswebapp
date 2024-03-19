@@ -1,19 +1,22 @@
 import { Component } from '@angular/core';
 import { ThemeService } from '@services/theme.service';
-import { AuthService } from '@services/auth.service';
-import { faLightbulb as farLight } from '@fortawesome/free-regular-svg-icons';
+import {
+  faLightbulb as farLight,
+  faCircleXmark,
+} from '@fortawesome/free-regular-svg-icons';
 import {
   faLightbulb as fasLight,
   faHome,
   faUser,
   faAt,
   faEnvelope,
+  faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
 import { FormBuilder, Validators } from '@angular/forms';
 
 import { RequestStatus } from '@models/request-status.model';
-import { UsersService } from '@services/users.service';
 import { profileUser } from '@models/user.model';
+import { EmailService } from '@services/email.service';
 
 @Component({
   selector: 'app-navbar',
@@ -26,9 +29,13 @@ export class NavbarComponent {
   faHome = faHome;
   faUser = faUser;
   faAt = faAt;
+  faPaperPlane = faPaperPlane;
   faEnvelope = faEnvelope;
-  alertStatus: boolean = false;
+  faCircleXmark = faCircleXmark;
+  message: string = '';
   statusDetail: RequestStatus = 'init';
+  statusEmail: RequestStatus = 'init';
+  statusEmailAlert: RequestStatus = 'init';
   phoneNumber: string = '573118874065';
   profileUser: profileUser[] = [];
 
@@ -39,8 +46,7 @@ export class NavbarComponent {
   constructor(
     public themeService: ThemeService,
     private formBuilder: FormBuilder,
-    private authService: AuthService,
-    private usersService: UsersService
+    private emailService: EmailService
   ) {}
   changeTheme() {
     this.themeService.setTheme(
@@ -49,7 +55,7 @@ export class NavbarComponent {
   }
 
   clickContact() {
-    this.alertStatus = true;
+    //this.alertStatus = true;
     this.statusDetail = 'loading';
   }
 
@@ -59,6 +65,42 @@ export class NavbarComponent {
 
   getWhatsappLink() {
     return `https://wa.me/${this.phoneNumber}`;
+  }
+
+  sendMailAlert() {
+    this.statusEmailAlert = 'loading';
+  }
+  sendMail() {
+    if (this.sendEmailForm.valid) {
+      this.statusEmail = 'loading';
+      const content = this.sendEmailForm.get('contentMessage')?.getRawValue();
+      //console.log(content);
+      this.emailService.sendEmail(content).subscribe({
+        next: (data) => {
+          this.statusEmail = 'success';
+          this.message = data.message;
+          console.log(this.message);
+          this.closeSendEmailAlertAfterDelay();
+          this.sendEmailForm.reset();
+        },
+        error: (error) => {
+          this.statusEmail = 'failed';
+          this.message = error.message;
+          console.error(this.message);
+        },
+      });
+    } else {
+      this.sendEmailForm.markAllAsTouched();
+    }
+  }
+  onCloseSendEmail() {
+    this.statusEmailAlert = 'init';
+    this.statusEmail = 'init';
+  }
+  closeSendEmailAlertAfterDelay() {
+    setTimeout(() => {
+      this.onCloseSendEmail();
+    }, 2000);
   }
   //////////////////////////////////////////////
   /*

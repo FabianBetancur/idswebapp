@@ -7,18 +7,21 @@
 >
   <!--////////////////////////////////////////////////////////////-->
   <div
+    (mouseover)="onMouseOver()"
+    (click)="onMouseOut()"
     [ngClass]="{
       'light-ga': themeService.getTheme() === 'light',
       'dark-ga': themeService.getTheme() === 'dark'
     }"
-    class="border-t border-slate-600 mt-14 pt-2 mb-2 h-32"
+    class="flex justify-center items-center border-t border-slate-600 mt-14 mb-2 h-32"
   >
-    <div class="flex-col pt-2">
+    <div *ngIf="!toggle" class="flex-col pt-2">
       <p class="pl-3 md:text-3xl font-black">DISPOSICIÓN DE ELEMENTOS</p>
       <p class="my-1 mx-6">
         Apariencia y distribución de componentes para software empresarial web.
       </p>
     </div>
+    <app-btn-nav *ngIf="toggle"></app-btn-nav>
   </div>
   <!--////////////////////////////////////////////////////////////-->
   <div class="flex justify-center items-center space-x-3">

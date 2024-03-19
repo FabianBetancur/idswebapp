@@ -7,7 +7,7 @@ import jwt_decode, { JwtPayload } from 'jwt-decode';
 })
 export class TokenService {
   private cookieService = inject(CookieService);
-  constructor(/*private cookieService: CookieService*/) {}
+  constructor() {}
   saveToken(token: string) {
     this.cookieService.set(
       'token-app',
