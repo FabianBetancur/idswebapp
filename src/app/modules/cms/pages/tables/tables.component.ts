@@ -2,7 +2,11 @@ import { Component } from '@angular/core';
 import { ThemeService } from '@services/theme.service';
 import { DataService } from '@services/data.service';
 import { HttpClient } from '@angular/common/http';
-import { faCircleDot } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCircleDot,
+  faCircleRight,
+  faCircleLeft,
+} from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-tables',
@@ -12,13 +16,9 @@ export class TablesComponent {
   dataSource: any[] = [];
   columns: string[] = ['column 1', 'column 2', 'column 3', 'column 4'];
   faCircleDot = faCircleDot;
-  toggle: boolean = false;
-  onMouseOver() {
-    this.toggle = true;
-  }
-  onMouseOut() {
-    this.toggle = false;
-  }
+  faCircleRight = faCircleRight;
+  faCircleLeft = faCircleLeft;
+
   constructor(
     private http: HttpClient,
     private dataService: DataService,

@@ -7,22 +7,27 @@
 >
   <!--////////////BANNER////////////-->
   <div
-    (mouseover)="onMouseOver()"
-    (click)="onMouseOut()"
     [ngClass]="{
       'light-ga': themeService.getTheme() === 'light',
       'dark-ga': themeService.getTheme() === 'dark'
     }"
-    class="mt-14 pt-2 h-32 md:h-36 flex justify-center items-center border-t border-slate-600"
+    class="mt-14 pt-2 pb-2 h-auto xl:h-36 flex justify-center items-center border-t border-slate-600"
   >
-    <div *ngIf="!toggle" class="flex-col">
-      <p class="pl-3 md:text-3xl font-black">PRESENTACIÓN DE LA INFORMACIÓN</p>
-      <p class="my-2 mx-7">
+    <div class="px-2 text-3xl">
+      <a routerLink="/tables"><fa-icon [icon]="faCircleLeft"></fa-icon></a>
+    </div>
+    <div class="flex-col">
+      <p class="xl:text-2xl xl:text-left text-lg text-center font-black">
+        PRESENTACIÓN DE LA INFORMACIÓN
+      </p>
+      <p class="mx-2 my-1 text-center xl:text-center text-sm xl:text-lg">
         Compactos contenedores para mostrar e interactuar con la información,
         ajustables, con alternancia de colores y temas.
       </p>
     </div>
-    <app-btn-nav *ngIf="toggle"></app-btn-nav>
+    <div class="px-2 text-3xl">
+      <a routerLink="/layouts"><fa-icon [icon]="faCircleRight"></fa-icon></a>
+    </div>
   </div>
   <!--////////////BANNER////////////-->
   <!--////////TABLA////////////////-->
