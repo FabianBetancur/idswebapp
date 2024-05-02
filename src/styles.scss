@@ -58,6 +58,10 @@
     border-bottom-color: #d25947;
 }
 
+.cdk-drag {
+  transition: transform 0.1s ease-in-out;
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: 1300px; /* Ajusta el ancho máximo según tus necesidades */

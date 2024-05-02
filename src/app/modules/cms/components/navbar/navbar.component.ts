@@ -36,7 +36,7 @@ export class NavbarComponent {
   statusDetail: RequestStatus = 'init';
   statusEmail: RequestStatus = 'init';
   statusEmailAlert: RequestStatus = 'init';
-  phoneNumber: string = '573118874065';
+  phoneNumber: string = '573108842192';
   profileUser: profileUser[] = [];
 
   sendEmailForm = this.formBuilder.group({

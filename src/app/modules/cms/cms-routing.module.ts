@@ -6,6 +6,8 @@ import { MenusComponent } from './pages/menus/menus.component';
 import { TablesComponent } from './pages/tables/tables.component';
 import { CardsComponent } from './pages/cards/cards.component';
 import { LayoutsComponent } from './pages/layouts/layouts.component';
+import { DragDrop } from '@angular/cdk/drag-drop';
+import { DragdropsComponent } from './pages/dragdrops/dragdrops.component';
 
 const routes: Routes = [
   {
@@ -36,6 +38,10 @@ const routes: Routes = [
       {
         path: 'layouts',
         component: LayoutsComponent,
+      },
+      {
+        path: 'draganddrops',
+        component: DragdropsComponent,
       },
     ],
   },

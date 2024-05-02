@@ -23,6 +23,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardBComponent } from './components/card-b/card-b.component';
 import { LayoutAComponent } from './components/layout-a/layout-a.component';
 import { LayoutBComponent } from './components/layout-b/layout-b.component';
+import { DragdropsComponent } from './pages/dragdrops/dragdrops.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { LayoutBComponent } from './components/layout-b/layout-b.component';
     CardBComponent,
     LayoutAComponent,
     LayoutBComponent,
+    DragdropsComponent,
   ],
   imports: [
     ReactiveFormsModule,
@@ -51,6 +54,7 @@ import { LayoutBComponent } from './components/layout-b/layout-b.component';
     CmsRoutingModule,
     FontAwesomeModule,
     CdkTableModule,
+    DragDropModule,
   ],
 })
 export class CmsModule {}
