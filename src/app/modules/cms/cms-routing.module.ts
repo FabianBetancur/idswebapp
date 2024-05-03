@@ -40,7 +40,7 @@ const routes: Routes = [
         component: LayoutsComponent,
       },
       {
-        path: 'draganddrops',
+        path: 'draganddrop',
         component: DragdropsComponent,
       },
     ],
