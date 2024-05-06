@@ -10,6 +10,7 @@ import { CustomTableComponent } from './components/custom-table/custom-table.com
 import { AlertComponent } from './components/alert/alert.component';
 import { BtnNavComponent } from './components/btn-nav/btn-nav.component';
 import { BtnSubmitComponent } from './components/btn-submit/btn-submit.component';
+import { BtnAppComponent } from './components/btn-app/btn-app.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { BtnSubmitComponent } from './components/btn-submit/btn-submit.component
     AlertComponent,
     BtnNavComponent,
     BtnSubmitComponent,
+    BtnAppComponent,
   ],
   imports: [CommonModule, FontAwesomeModule, RouterModule, CdkTableModule],
   exports: [
@@ -28,6 +30,7 @@ import { BtnSubmitComponent } from './components/btn-submit/btn-submit.component
     AlertComponent,
     BtnNavComponent,
     BtnSubmitComponent,
+    BtnAppComponent,
   ],
 })
 export class SharedModule {}

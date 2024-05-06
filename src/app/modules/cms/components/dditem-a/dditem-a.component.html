@@ -1,0 +1,45 @@
+<div class="flex w-full">
+  <div class="w-full">
+    {{ item }}
+  </div>
+
+  <button (click)="editItemName()" class="w-auto text-md">
+    <fa-icon [icon]="faPaperclip"></fa-icon>
+  </button>
+</div>
+<!--///////////////ALERT//////////////////-->
+<app-alert *ngIf="status !== 'init'" [statusDetail]="status">
+  <p
+    [ngClass]="{
+      'light-s': themeService.getTheme() === 'light',
+      'dark-s': themeService.getTheme() === 'dark'
+    }"
+    class="m-4"
+  >
+    Modifica el elemento
+  </p>
+  <div class="mb-5 mt-5 w-auto flex justify-center items-center">
+    <form [formGroup]="updateItemName">
+      <div class="">
+        <input
+          class="rounded w-full border-gray-300 border-2 text-primary-950"
+          formControlName="itemName"
+          type="text"
+          autocomplete="off"
+        />
+      </div>
+    </form>
+  </div>
+  <div class="flex mt-5 mb-5 space-x-12 justify-center items-center w-auto">
+    <app-btn-app
+      (click)="saveChangeItemName()"
+      [typeBtn]="'button'"
+      [color]="'success'"
+      >OK</app-btn-app
+    >
+    <app-btn-app (click)="onClose()" [typeBtn]="'button'" [color]="'primary'"
+      >Salir</app-btn-app
+    >
+  </div>
+</app-alert>
+<!--/////////////////////////////////////7//////////////////-->

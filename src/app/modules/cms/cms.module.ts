@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { FormsModule } from '@angular/forms';
 
 import { CmsRoutingModule } from './cms-routing.module';
 import { HomeComponent } from './pages/home/home.component';
@@ -24,7 +26,7 @@ import { CardBComponent } from './components/card-b/card-b.component';
 import { LayoutAComponent } from './components/layout-a/layout-a.component';
 import { LayoutBComponent } from './components/layout-b/layout-b.component';
 import { DragdropsComponent } from './pages/dragdrops/dragdrops.component';
-import { DragDropModule } from '@angular/cdk/drag-drop';
+import { DditemAComponent } from './components/dditem-a/dditem-a.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     LayoutAComponent,
     LayoutBComponent,
     DragdropsComponent,
+    DditemAComponent,
   ],
   imports: [
     ReactiveFormsModule,
@@ -55,6 +58,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     FontAwesomeModule,
     CdkTableModule,
     DragDropModule,
+    FormsModule,
   ],
 })
 export class CmsModule {}

@@ -43,7 +43,7 @@
       [cdkDropListData]="items"
       [cdkDropListConnectedTo]="[lista2]"
       (cdkDropListDropped)="onDrop($event)"
-      class="m-3 grid-cols-1 border border-primary-700 rounded-md w-auto xl:w-1/3"
+      class="m-3 grid-cols-1 border border-primary-700 rounded-md w-auto xl:w-1/4"
     >
       <div class="h-auto w-auto">
         <button (click)="addItem()" class="ml-2 m-1 text-xl">
@@ -56,16 +56,15 @@
           'dark-s': themeService.getTheme() === 'dark'
         }"
         class="flex border p-2 bg-primary-500 border-primary-600 rounded-md m-2 cursor-pointer cdk-drag"
-        *ngFor="let item of items"
+        *ngFor="let item of items; let i = index"
         cdkDrag
       >
-        <div class="w-full">
-          {{ item }}
-        </div>
-
-        <button class="w-auto text-sm">
-          <fa-icon [icon]="faPaperclip"></fa-icon>
-        </button>
+        <app-dditem-a
+          class="w-full"
+          [item]="item"
+          [index]="i"
+          (dataEvent)="receiveItemName($event)"
+        ></app-dditem-a>
       </div>
     </div>
     <!--///////////////////////////////-->
@@ -79,7 +78,7 @@
       [cdkDropListData]="newItems"
       [cdkDropListConnectedTo]="[lista1]"
       (cdkDropListDropped)="onDrop($event)"
-      class="m-3 grid-cols-1 border border-primary-700 rounded-md w-auto xl:w-1/3"
+      class="m-3 grid-cols-1 border border-primary-700 rounded-md w-auto xl:w-1/4"
     >
       <div class="flex p-1 pr-2">
         <button class="text-transparent w-full ml-3 text-xl">+</button>
@@ -92,7 +91,7 @@
           'light-s': themeService.getTheme() === 'light',
           'dark-s': themeService.getTheme() === 'dark'
         }"
-        class="flex border p-2 border-primary-600 rounded-md m-2 cursor-pointer cdk-drag"
+        class="flex border p-2 bg-primary-500 border-primary-600 rounded-md m-2 cursor-pointer cdk-drag"
         *ngFor="let item of newItems; let i = index"
         cdkDrag
       >
@@ -100,7 +99,7 @@
           {{ item }}
         </div>
 
-        <button (click)="removeItem(i)" class="w-auto text-sm">
+        <button (click)="removeItem(i)" class="w-auto text-md">
           <fa-icon [icon]="faCircleXmark"></fa-icon>
         </button>
       </div>

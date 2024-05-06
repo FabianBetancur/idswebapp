@@ -5,6 +5,7 @@ import {
   faTableList,
   faIdCard,
   faGrip,
+  faBoxesStacked,
 } from '@fortawesome/free-solid-svg-icons';
 import { ThemeService } from 'src/app/services/theme.service';
 
@@ -18,6 +19,7 @@ export class OptionNavComponent {
   faTableList = faTableList;
   faIdCard = faIdCard;
   faGrip = faGrip;
+  faBoxesStacked = faBoxesStacked;
 
   constructor(public themeService: ThemeService) {}
 }

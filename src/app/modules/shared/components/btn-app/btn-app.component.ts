@@ -2,16 +2,17 @@ import { Component, Input } from '@angular/core';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-btn-submit',
-  templateUrl: './btn-submit.component.html',
+  selector: 'app-btn-app',
+  templateUrl: './btn-app.component.html',
 })
-export class BtnSubmitComponent {
-  faSpinner = faSpinner;
+export class BtnAppComponent {
   @Input() typeBtn: 'button' | 'reset' | 'submit' = 'button';
   @Input() color: 'success' | 'primary' | 'danger' | 'light' | 'sky' =
     'primary';
   @Input() loading = false;
   @Input() disabled = false;
+
+  faSpinner = faSpinner;
 
   mapColors = {
     success: {

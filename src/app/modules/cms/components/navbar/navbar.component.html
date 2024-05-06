@@ -48,25 +48,25 @@
 <app-alert (click)="onClose()" [statusDetail]="statusDetail">
   <div class="flex justify-center items-center my-2">
     <!---->
-    <div class="my-2 mx-3 xl:w-2/3 flex-col justify-center items-center">
+    <div class="my-2 mb-10 mx-3 xl:w-2/3 flex-col justify-center items-center">
       <button class="flex my-4 w-full justify-center items-center">
         <fa-icon class="text-6xl my-2" [icon]="faAt"></fa-icon>
       </button>
-      <p class="my-4 text-center xl:text-xl">
+      <p class="my-8 text-center xl:text-xl">
         Construimos entornos web simples y ajustables, con diseños y tecnologías
         innovadoras.
       </p>
-      <div class="text-left space-x-4">
-        <p class="my-2 font-semibold xl:text-xl">Contacto:</p>
-        <button>
+      <div class="flex-col space-y-1">
+        <p class="font-semibold xl:text-xl">Contacto:</p>
+        <button class="ml-4 flex space-x-3">
           <fa-icon [icon]="faEnvelope"></fa-icon>
-          <a class="mx-2" [href]="getWhatsappLink()" target="_blank"
-            >Enviar mensaje por WhatsApp
+          <a class="" [href]="getWhatsappLink()" target="_blank"
+            >Escribeme a WhatsApp
           </a>
         </button>
-        <button (click)="sendMailAlert()">
+        <button class="ml-4 flex space-x-3" (click)="sendMailAlert()">
           <fa-icon [icon]="faPaperPlane"></fa-icon>
-          <a class="mx-2">Enviar comentario</a>
+          <a class="">Enviame un comentario</a>
         </button>
       </div>
     </div>
@@ -78,13 +78,13 @@
 <app-alert [statusDetail]="statusEmailAlert"
   ><div>
     <div>
-      <button (click)="onCloseSendEmail()">
+      <button class="text-xl" (click)="onCloseSendEmail()">
         <fa-icon [icon]="faCircleXmark"></fa-icon>
       </button>
     </div>
     <form [formGroup]="sendEmailForm" novalidate (ngSubmit)="sendMail()">
       <div class="mx-5">
-        <p>Dejame tu comentario:</p>
+        <p>Escribe tu comentario:</p>
       </div>
       <div class="flex justify-center items-center">
         <hr class="border-slate-900 w-3/4 my-4" />
@@ -110,7 +110,7 @@
           *ngIf="sendEmailForm.controls.contentMessage.hasError('required')"
           class="font-medium text-red-700 text-xs"
         >
-          This field is mandatory
+          Este campo es obligatorio
         </p>
       </div>
       <!--////////////////////////-->

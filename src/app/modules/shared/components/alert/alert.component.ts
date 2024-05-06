@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ThemeService } from '@services/theme.service';
 
 @Component({
   selector: 'app-alert',
@@ -7,6 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class AlertComponent {
   @Input() statusDetail: 'loading' | 'success' | 'failed' | 'init' = 'init';
+  constructor(public themeService: ThemeService) {}
 
   onClose() {
     this.statusDetail = 'init';
